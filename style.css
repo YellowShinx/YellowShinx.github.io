@@ -1,0 +1,13 @@
+/* Ejemplo para cambiar la fuente o agregar detalles sutiles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Efecto hover suave para las tarjetas del blog */
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
