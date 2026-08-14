@@ -1,13 +1,50 @@
-/* Ejemplo para cambiar la fuente o agregar detalles sutiles */
+/* --- ESTILOS GENERALES Y TEMA SHINX SHINY --- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
 }
 
 /* Efecto hover suave para las tarjetas del blog */
 .card {
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #e0e0e0;
 }
 
 .card:hover {
     transform: translateY(-3px);
+}
+
+/* --- COLORES TIPO SHINX SHINY --- */
+
+/* Fondo amarillo brillante para cabeceras o elementos destacados */
+.shinx-bg {
+    background-color: #ffde34 !important;
+    color: #1a1a1a !important; /* Texto oscuro para buen contraste */
+}
+
+/* Color de texto amarillo Shinx para títulos y acentos */
+.shinx-yellow-text {
+    color: #bfa100 !important;
+}
+
+/* Botones con estilo Shinx shiny */
+.btn-shinx {
+    background-color: #ffde34;
+    border-color: #e6c520;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.btn-shinx:hover {
+    background-color: #e6c520;
+    border-color: #ccb01c;
+    color: #000;
+}
+
+/* Enlaces de la barra lateral y menús con detalles eléctricos */
+.list-group-item-action:hover {
+    background-color: #fff8d6;
+    color: #bfa100;
 }
