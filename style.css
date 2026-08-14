@@ -5,7 +5,7 @@ body {
 
 /* Efecto hover suave para las tarjetas del blog */
 .card {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 
 .card:hover {
