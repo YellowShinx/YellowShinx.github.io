@@ -3,39 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kingdom Hearts II - Review | YellowShinx</title>
+    <title>TITULO - Review | YellowShinx</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .star-rating { color: #ffc107; font-size: 1.5rem; }
         .game-cover { width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .shinx-yellow-text { color: #ffc107; }
+        .badge-ps {
+            background-color: blue;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        .badge-steam {
+            background-color: black;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        .badge-switch {
+            background-color: red;
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-warning" href="../index.html">⚡ My Journal</a>
+            <a class="navbar-brand fw-bold text-warning" href="index.html">⚡ My Journal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/videogames.html">Videogames</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pokemon.html">Pokémon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+    <!-- Return to Journal button --> 
+    <div class="container mt-4"> 
+        <a href="https://yellowshinx.github.io/videogames.html" class="btn btn-warning"> Return to Journal </a> 
+    </div>
+    
     <main class="container mt-5 mb-5">
         <div class="card shadow-sm border-0 p-4">
             <div class="row">
                 <!-- COLUMNA IZQUIERDA: PORTADA -->
                 <div class="col-md-4">
-                    <img src="../imgs/kh2-cover.jpg" class="game-cover" alt="Kingdom Hearts II Cover">
+                    <img src="/imgs/GAMECOVER.jpg" class="game-cover" alt="GAME Cover">
                 </div>
 
                 <!-- COLUMNA DERECHA: INFO Y LISTAS -->
                 <div class="col-md-8">
-                    <h1 class="fw-bold shinx-yellow-text">Game Title</h1>
+                    <h1 class="fw-bold shinx-yellow-text">GAME TITLE</h1>
                     
                     <div class="my-3">
-                        <p><strong>Rating:</strong> <span class="star-rating">★★★★★★★★★★</span> </strong>10/10</p>
-                        <p><strong>Plataforms:</strong> PS2 / PS4 / STEAM</p>
-                        <p><strong>Playtime:</strong> X hours</p>
+                        <p><strong>Rating:</strong> <span class="star-rating">★★★★★★★★★★</span> <strong>10/10</strong></p>
+                        <p><strong>Platforms:</strong> <span class="badge-ps">PS2</span> / <span class="badge-ps">PS3</span> / <span class="badge-ps">PS4</span> / <span class="badge-steam">Steam</span></p>
+                        <p><strong>Playtime:</strong> PLAYTIME.</p>
                     </div>
 
                     <div class="row">
@@ -45,7 +82,7 @@
                                 <div class="card-header bg-success text-white">Pros</div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Awesome controls.</li>
-                                    <li class="list-group-item">Phenomenal soundtrack.</li>
+                                    <li class="list-group-item">Phenomenal soundtrack by the great Yoko Shimomura.</li>
                                     <li class="list-group-item">Endgame content.</li>
                                 </ul>
                             </div>
@@ -57,7 +94,6 @@
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Slow prologue.</li>
                                     <li class="list-group-item">Forced world revisits.</li>
-                                    <li class="list-group-item">Complex plot progression.</li>
                                 </ul>
                             </div>
                         </div>
@@ -70,7 +106,7 @@
                 <div class="col-12">
                     <h2 class="h3 shinx-yellow-text border-bottom pb-2">Thoughts</h2>
                     <p class="mt-3">
-                       Write here. 
+                        Write here, Marcos.
                     </p>
                 </div>
             </div>
