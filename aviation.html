@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airpedia - Aviation Directory</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- Top Navbar with compact yellow links -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-warning" href="index.html">⚡✈️ My Journal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -18,9 +19,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="videogames.html">Videogames</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aviation.html">Aviation</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="aviation.html">Aviation</a></li>
                     <li class="nav-item"><a class="nav-link" href="pokemon.html">Pokémon</a></li>
                 </ul>
             </div>
@@ -28,146 +29,164 @@
     </nav>
 
     <!-- Header with Shinx background style -->
-    <header class="shinx-bg">
-        <h1>Airpedia</h1>
-        <p class="shinx-yellow-text" style="font-weight: 600;">The collection of pictures I have taken to planes.</p>
+    <header class="shinx-bg text-center py-5 mb-4 shadow">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Airpedia</h1>
+            <p class="shinx-yellow-text lead fw-semibold">The collection of pictures I have taken of planes.</p>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Column 1: Sort by Airline -->
-        <div class="column card">
-            <h2>Sort by Airline</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="airbaltic.html">
-                                <img src="images/airbaltic.jpg" alt="AirBaltic">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="airbaltic.html">AirBaltic</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="AirEuropa.html">
-                                <img src="images/AirEuropa.jpg" alt="AirEuropa">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="AirEuropa.html">AirEuropa</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="AirFrance.html">
-                                <img src="images/AirFrance.jpg" alt="AirFrance">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="AirFrance.html">AirFrance</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="ba.html">
-                                <img src="images/ba.jpg" alt="British Airways">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="ba.html">British Airways</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="EasyJet.html">
-                                <img src="images/easyjet.jpg" alt="EasyJet">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="EasyJet.html">EasyJet</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="Helvetic.html">
-                                <img src="images/helvetic.jpg" alt="Helvetic">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="Helvetic.html">Helvetic</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="ryanair.html">
-                                <img src="images/Ryanair.jpg" alt="Ryanair">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="ryanair.html">Ryanair</a>
-                        </td>
-                    </tr>
-                     <tr>
-                        <td style="width: 120px;">
-                            <a href="turkishairlines.html">
-                                <img src="images/turkishairlines.jpg" alt="Turkish Airlines">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="turkishairlines.html">Turkish Airlines</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="vueling.html">
-                                <img src="images/vueling.jpg" alt="Vueling">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="vueling.html">Vueling</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- Main Content Grid -->
+    <div class="container my-4">
+        <div class="row">
+            
+            <!-- Column 1: Sort by Airline -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm p-3">
+                    <h2 class="h4 mb-3">Sort by Airline</h2>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 120px;">
+                                        <a href="airbaltic.html">
+                                            <img src="images/airbaltic.jpg" class="img-fluid rounded" alt="AirBaltic">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="airbaltic.html" class="text-decoration-none text-dark fw-semibold">AirBaltic</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="AirEuropa.html">
+                                            <img src="images/AirEuropa.jpg" class="img-fluid rounded" alt="AirEuropa">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="AirEuropa.html" class="text-decoration-none text-dark fw-semibold">AirEuropa</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="AirFrance.html">
+                                            <img src="images/AirFrance.jpg" class="img-fluid rounded" alt="AirFrance">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="AirFrance.html" class="text-decoration-none text-dark fw-semibold">AirFrance</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="ba.html">
+                                            <img src="images/ba.jpg" class="img-fluid rounded" alt="British Airways">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="ba.html" class="text-decoration-none text-dark fw-semibold">British Airways</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="EasyJet.html">
+                                            <img src="images/easyjet.jpg" class="img-fluid rounded" alt="EasyJet">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="EasyJet.html" class="text-decoration-none text-dark fw-semibold">EasyJet</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="Helvetic.html">
+                                            <img src="images/helvetic.jpg" class="img-fluid rounded" alt="Helvetic">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="Helvetic.html" class="text-decoration-none text-dark fw-semibold">Helvetic</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="ryanair.html">
+                                            <img src="images/Ryanair.jpg" class="img-fluid rounded" alt="Ryanair">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="ryanair.html" class="text-decoration-none text-dark fw-semibold">Ryanair</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="turkishairlines.html">
+                                            <img src="images/turkishairlines.jpg" class="img-fluid rounded" alt="Turkish Airlines">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="turkishairlines.html" class="text-decoration-none text-dark fw-semibold">Turkish Airlines</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="vueling.html">
+                                            <img src="images/vueling.jpg" class="img-fluid rounded" alt="Vueling">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="vueling.html" class="text-decoration-none text-dark fw-semibold">Vueling</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Column 2: Sort by Aircraft -->
-        <div class="column card">
-            <h2>Sort by Aircraft</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td style="width: 120px;">
-                            <a href="boeing747.html">
-                                <img src="images/boeing-747.jpg" alt="Boeing 747">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="boeing747.html">Boeing 747</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="airbus380.html">
-                                <img src="images/airbus-a380.jpg" alt="Airbus A380">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="airbus380.html">Airbus A380</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Column 2: Sort by Aircraft -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm p-3">
+                    <h2 class="h4 mb-3">Sort by Aircraft</h2>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 120px;">
+                                        <a href="boeing747.html">
+                                            <img src="images/boeing-747.jpg" class="img-fluid rounded" alt="Boeing 747">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="boeing747.html" class="text-decoration-none text-dark fw-semibold">Boeing 747</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="airbus380.html">
+                                            <img src="images/airbus-a380.jpg" class="img-fluid rounded" alt="Airbus A380">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="airbus380.html" class="text-decoration-none text-dark fw-semibold">Airbus A380</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
             <p class="mb-0 small">&copy; 2026 YellowShinx.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
