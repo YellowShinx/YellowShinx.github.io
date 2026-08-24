@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airpedia - Aviation Directory</title>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-color: #ddd;
+            --accent-color: #0066cc;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .column h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            font-weight: 600;
+        }
+
+        td img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        td img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Airpedia</h1>
+        <p>Your ultimate guide to airlines and aircraft</p>
+    </header>
+
+    <div class="container">
+        <!-- Column 1: Sort by Airline -->
+        <div class="column">
+            <h2>Sort by Airline</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Logo / Image</th>
+                        <th>Airline Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="airlines/delta.html">
+                                <img src="images/delta-logo.jpg" alt="Delta Air Lines">
+                            </a>
+                        </td>
+                        <td><a href="airlines/delta.html">Delta Air Lines</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="airlines/emirates.html">
+                                <img src="images/emirates-logo.jpg" alt="Emirates">
+                            </a>
+                        </td>
+                        <td><a href="airlines/emirates.html">Emirates</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Column 2: Sort by Aircraft -->
+        <div class="column">
+            <h2>Sort by Aircraft</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aircraft Photo</th>
+                        <th>Aircraft Model</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="aircraft/boeing-747.html">
+                                <img src="images/boeing-747.jpg" alt="Boeing 747">
+                            </a>
+                        </td>
+                        <td><a href="aircraft/boeing-747.html">Boeing 747</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="aircraft/airbus-a380.html">
+                                <img src="images/airbus-a380.jpg" alt="Airbus A380">
+                            </a>
+                        </td>
+                        <td><a href="aircraft/airbus-a380.html">Airbus A380</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
