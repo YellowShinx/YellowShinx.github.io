@@ -1,50 +1,248 @@
-/* --- ESTILOS GENERALES Y TEMA SHINX SHINY --- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airpedia - Aviation Directory</title>
+    <style>
+        /* --- ESTILOS GENERALES Y TEMA SHINX SHINY --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #1a1a1a;
-}
+        /* Top Navbar Style */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* Efecto hover suave para las tarjetas del blog */
-.card {
-    transition: transform 0.2s ease-in-out;
-    border: 1px solid #e0e0e0;
-}
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
 
-.card:hover {
-    transform: translateY(-3px);
-}
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
 
-/* --- COLORES TIPO SHINX SHINY --- */
+        .navbar-nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-/* Fondo amarillo brillante para cabeceras o elementos destacados */
-.shinx-bg {
-    background-color: #ffde34 !important;
-    color: #1a1a1a !important; /* Texto oscuro para buen contraste */
-}
+        .navbar-nav a:hover {
+            color: #bfa100;
+        }
 
-/* Color de texto amarillo Shinx para títulos y acentos */
-.shinx-yellow-text {
-    color: #bfa100 !important;
-}
+        /* Efecto hover suave para las tarjetas */
+        .card {
+            transition: transform 0.2s ease-in-out;
+            border: 1px solid #e0e0e0;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
 
-/* Botones con estilo Shinx shiny */
-.btn-shinx {
-    background-color: #ffde34;
-    border-color: #e6c520;
-    color: #1a1a1a;
-    font-weight: 600;
-}
+        .card:hover {
+            transform: translateY(-3px);
+        }
 
-.btn-shinx:hover {
-    background-color: #e6c520;
-    border-color: #ccb01c;
-    color: #000;
-}
+        /* --- COLORES TIPO SHINX SHINY --- */
+        .shinx-bg {
+            background-color: #ffde34 !important;
+            color: #1a1a1a !important;
+        }
 
-/* Enlaces de la barra lateral y menús con detalles eléctricos */
-.list-group-item-action:hover {
-    background-color: #fff8d6;
-    color: #bfa100;
-}
+        .shinx-yellow-text {
+            color: #bfa100 !important;
+        }
+
+        .btn-shinx {
+            background-color: #ffde34;
+            border: 1px solid #e6c520;
+            color: #1a1a1a;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-shinx:hover {
+            background-color: #e6c520;
+            border-color: #ccb01c;
+            color: #000;
+        }
+
+        /* --- LAYOUT ESPECÍFICO --- */
+        header {
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid #e6c520;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .column h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: middle;
+        }
+
+        td img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s ease;
+            display: block;
+        }
+
+        td img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar matching index.html style -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">YellowShinx</a>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aviation.html">Aviation</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header with Shinx background style -->
+    <header class="shinx-bg">
+        <h1>Airpedia</h1>
+        <p class="shinx-yellow-text" style="font-weight: 600;">Your ultimate guide to airlines and aircraft</p>
+    </header>
+
+    <div class="container">
+        <!-- Column 1: Sort by Airline -->
+        <div class="column card">
+            <h2>Sort by Airline</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 120px;">
+                            <a href="delta.html">
+                                <img src="images/delta-logo.jpg" alt="Delta Air Lines">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="delta.html">Delta Air Lines</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="emirates.html">
+                                <img src="images/emirates-logo.jpg" alt="Emirates">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="emirates.html">Emirates</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Column 2: Sort by Aircraft -->
+        <div class="column card">
+            <h2>Sort by Aircraft</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 120px;">
+                            <a href="boeing747.html">
+                                <img src="images/boeing-747.jpg" alt="Boeing 747">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="boeing747.html">Boeing 747</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="airbus380.html">
+                                <img src="images/airbus-a380.jpg" alt="Airbus A380">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="airbus380.html">Airbus A380</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
